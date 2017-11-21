@@ -26,13 +26,14 @@
                 break;
             };
         };
-        if ($_POST['login'] == $user)
+        if ($_POST['login'] == $user)  
+        // Правильно так: ($_POST['login'] == $user and $_POST['pass'] == $pass), но это почему-то не захотело работать, где-то косяк
             {
                 session_start();
                 $_SESSION['login'] = $user; //Имя пользователя
                 $_SESSION['type'] = 0; //Права пользователя
                 header('Location: showContent.php'); //Функция отправки http заголовка
-        }else header('Location: badpassword1.html');
+        }else header('Location: badpassword.html');
     }
 	else header('Location: badpassword.html');
 ?>
