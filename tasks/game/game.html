@@ -1,0 +1,22 @@
+<html>
+<head>
+	<title>Угадай число!</title>
+</head>
+<body>
+	<h1>Угадай число!</h1>
+	<h3>Вы можете угадать число, заданное компьютером...</h3>
+	<form method="post" action="../game/guessNumber.php">
+		Ваше число: <input type="text" name="number">
+		<input type="submit" value="Дерзай!">
+		<input type="hidden" name="type" value="user">
+	</form>
+	<h3>...Или загадать число самостоятельно: </h3>
+	<form method="post" action="../game/guessNumber.php">
+		Число от <input type="text" name="min" size="5"> до <input type="text" name="max" size="5">
+		<input type="hidden" name="type" value="guessing"> 
+		<input type="submit" value="Число загадано!">
+	</form>
+	<hr>
+	<a href="index.html">На главную страницу</a>
+</body>
+</html>
